@@ -43,11 +43,9 @@ class Ingredient: convert_to_mass()
 
 What libraries and tools will you need to learn to use?
 
-"How to read HTML files"
+Library BeautifulSoup: Multipurpose web scraping library capable of doanloading, outputting and parsing HTML files under python.
 
-"Import html for python?"
-
-"google the small steps"
+Library HTMLParser: The basis for parsing text file formatted in HTML. Another option for parsing.
 
 ## 5. Priority of Features
 
