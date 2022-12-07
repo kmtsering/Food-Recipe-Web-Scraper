@@ -1,0 +1,96 @@
+1669846998112	geckodriver	INFO	Listening on 127.0.0.1:7510
+1669847002601	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "7511" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SYSTEM~1\\AppData\\Local\\Temp\\rust_mozprofileVGw2OV"
+1669847003843	Marionette	INFO	Marionette enabled
+1669847003855	Marionette	INFO	Listening on port 7526
+Read port: 7526
+WebDriver BiDi listening on ws://127.0.0.1:7511
+1669847004542	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SYSTEM~1\\AppData\\Local\\Temp\\rust_mozprofileVGw2OV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:7511/devtools/browser/954bb3e2-9874-415b-81e5-6c2e96f63e3a
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x8007000e Rect(x=524288, y=524416, w=1024, h=384)
+[GFX1-]: Handling webrender error 4
+[Parent 14736, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:559
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Parent 14736, Main Thread] WARNING: base::KillProcess refusing to terminate process handle 0: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:405
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+[GFX1-]: IPC Channel is already torn down unexpectedly
+
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofileVGw2OV\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofileVGw2OV\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorkerJavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_moJavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofileVGw2OV\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofileVGw2OV\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofileVGw2OV\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofileVGw2OV\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofileVGw2OV\thumbnails) because it does not exist
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofileVGw2OV\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofileVGw2OV\thumbnails) because it does not exist
+1670037368224	Marionette	INFO	Stopped listening on por1670037369557	Marionette	INFO	Stopped listening on port 1296
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1670037580446	geckodriver	INFO	Listening on 127.0.0.1:9690
+1670037583500	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "9691" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SYSTEM~1\\AppData\\Local\\Temp\\rust_mozprofileDZVxmL"
+1670037636945	geckodriver	INFO	Listening on 127.0.0.1:9865
+1670037639996	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "9866" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SYSTEM~1\\AppData\\Local\\Temp\\rust_mozprofile6cVvQG"
+1670037640398	Marionette	INFO	Marionette enabled
+1670037640404	Marionette	INFO	Listening on port 9880
+Read port: 9880
+WebDriver BiDi listening on ws://127.0.0.1:9866
+1670037640516	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SYSTEM~1\\AppData\\Local\\Temp\\rust_mozprofile6cVvQG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:9866/devtools/browser/60e51901-dd3c-4692-8ba4-9c62592a656c
+1670374925660	geckodriver	INFO	Listening on 127.0.0.1:12642
+1670374928755	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "12643" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SYSTEM~1\\AppData\\Local\\Temp\\rust_mozprofileR0PXZg"
+1670374929387	Marionette	INFO	Marionette enabled
+1670374929395	Marionette	INFO	Listening on port 12665
+Read port: 12665
+WebDriver BiDi listening on ws://127.0.0.1:12643
+1670374929540	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SYSTEM~1\\AppData\\Local\\Temp\\rust_mozprofileR0PXZg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:12643/devtools/browser/c496788f-a871-438b-b41d-d29c0c9f9e4a
+JavaScript warning: https://ads.adthrive.com/builds/core/85971bc/vendor/prebid/es2018/prebid.min.js, line 1: unreachable code after return statement
+JavaScript warning: https://ads.adthrive.com/builds/core/85971bc/es2018/js/adthrive.min.js?deployment=2022-12-06-1:ade-484:pr2913:85971bc&experiments=rubiconFloors,recencyFrequency, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/essencedigitalna20153870852878/moatad.js#moatClientLevel1=3771812&moatClientLevel2=28377183&moatClientLevel3=543569419&moatClientLevel4=181068472&moatClientSlicer1=6022511&moatClientSlicer2=352408863&zMoatG=ct=US&st=MA&city=13782&dma=8&zp=02148&bw=4&ord=288820716&zMoatAUCID=, line 239: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/essencedigitalna20153870852878/moatad.js#moatClientLevel1=3771812&moatClientLevel2=28377183&moatClientLevel3=543569419&moatClientLevel4=181068205&moatClientSlicer1=6022511&moatClientSlicer2=352408902&zMoatG=ct=US&st=MA&city=13782&dma=8&zp=02148&bw=4&ord=1693920725&zMoatAUCID=, line 239: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/essencedigitalna20153870852878/moatad.js#moatClientLevel1=3771812&moatClientLevel2=28377183&moatClientLevel3=543569419&moatClientLevel4=181068469&moatClientSlicer1=6022511&moatClientSlicer2=352408920&zMoatG=ct=US&st=MA&city=13782&dma=8&zp=02148&bw=4&ord=135223269&zMoatAUCID=, line 239: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 6233 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 2765 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 5844 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 983 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 3615 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 3936 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 3565 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 5865 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 3700 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/thetradedeskvideo910663478306/moatvideo.js#_moatApi87364723, line 247: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 5609 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/essencedigitalna20153870852878/moatad.js#moatClientLevel1=3771812&moatClientLevel2=28377183&moatClientLevel3=540500146&moatClientLevel4=179428208&moatClientSlicer1=6022511&moatClientSlicer2=352125829&zMoatG=ct=US&st=MA&city=13782&dma=8&zp=02148&bw=4&ord=1896200839&zMoatAUCID=, line 239: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 3667 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+ientLevel3=543569419&moatClientLevel4=181068205&moatClientSlicer1=6022511&moatClientSlicer2=352408902&zMoatG=ct=US&st=MA&city=13782&dma=8&zp=02148&bw=4&ord=2683094399&zMoatAUCID=, line 239: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/essencedigitalna20153870852878/moatad.js#moatClientLevel1=3771812&moatClientLevel2=28377183&moatClientLevel3=543569419&moatClientLevel4=181068469&moatClientSlicer1=6022511&moatClientSlicer2=352408920&zMoatG=ct=US&st=MA&city=13782&dma=8&zp=02148&bw=4&ord=2282737431&zMoatAUCID=, line 239: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/essencedigitalna20153870852878/moatad.js#moatClientLevel1=3771812&moatClientLevel2=28377183&moatClientLevel3=543569419&moatClientLevel4=181068472&moatClientSlicer1=6022511&moatClientSlicer2=352408863&zMoatG=ct=US&st=MA&city=13782&dma=8&zp=02148&bw=4&ord=655468081&zMoatAUCID=, line 239: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 7497 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 7485 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0QqkXV7QytCM2yBsJSpYzuW1gkirrTGdWmkSPx9VuYE.js line 2 > eval line 6606 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://imasdk.googleapis.com/formats/outstream/versioned/prod2/outstream_web_client_20221114_RC00/outstream.min.js, line 644: Error: lima_error_fetching_ad: Response string is not a valid VAST document.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: https://imasdk.googleapis.com/formats/outstream/versioned/prod2/outstream_web_client_20221114_RC00/outstream.min.js, line 644: Error: lima_error_fetching_ad: Response string is not a valid VAST document.
+1670375114298	Marionette	INFO	Stopped listening on port 7770
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1106: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\SYSTEM~1\AppData\Local\Temp\rust_mozprofile74V8Yx\protections.sqlite

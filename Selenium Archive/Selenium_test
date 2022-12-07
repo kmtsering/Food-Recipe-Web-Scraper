@@ -2,4 +2,5 @@ from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
 
 driver = webdriver.Firefox()
-driver.get("https://google.co.in")
+driver.get("https://www.gimmesomeoven.com/bacon-brussels-sprouts-with-hot-honey/")
+driver.quit()
