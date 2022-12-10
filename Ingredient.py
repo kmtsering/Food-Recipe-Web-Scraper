@@ -1,6 +1,6 @@
 class Ingredient:
     '''
-    Holds recipe data 
+    Holds a single ingredient and its data.
     '''
     def __init__(self, quantity, unit, name):
         '''

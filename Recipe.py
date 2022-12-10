@@ -1,5 +1,5 @@
 import Ingredient       # access ingredient class to put ingredient objects into recipe
-
+import Instruction
 class Recipe:
     '''
     Parent class for all desired data.
@@ -12,14 +12,29 @@ class Recipe:
         self.yields = yields
         self.total_time = total_time
         self.ingredient_list = []
-        
+        self.instruction_list = []
+
+    def create_ingredient_entry(self, quantity, unit, name, description):
+        '''
+        Creates one Ingredient object 
+        and appends to ingredient_list
+        '''
+        self.ingredient_list.append(Ingredient.Ingredient(quantity, unit, name, description))
+
     def print_header(self):
         '''
-        Prints out name yields and total time.
+        Prints out name, yields, and total time.
         '''
         print(self.name)
         print(self.yields)
         print(self.total_time)
+    
+    def instruction_list(self, order, summary, description):
+        '''
+        Prints out directions in step, summary, and descripton.
+        '''
+        self.instruction_list.append(Instruction.Instruction(order, summary, description))
+
 
 
 # import html.parser
