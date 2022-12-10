@@ -1,6 +1,7 @@
 
 from bs4 import BeautifulSoup
 import Recipe
+import Ingredient
 import Instruction
 
 def extract_header(soup_obj):
@@ -20,41 +21,42 @@ def extract_ingredients(soup_obj):
     Extracts all ingredients from HTML
     and put it into recipe object.
     '''
-    ingredient_parent_node = soup_obj.find_('div', {'class' : 'tasty-recipes-ingredients-body'})
+    ingredient_parent_node = soup_obj.find('div', {'class' : 'tasty-recipes-ingredients-body'})    # narrows scope to ingredients body
+    ingredient_parent_subnode = ingredient_parent_node.findChild('ul')                             # steps down one node from parent
+    ingredient_parent_subnode = ingredient_parent_node.find('ul')
+    ingredient_children= ingredient_parent_subnode.findChildren("li", recursive=False)
+    
+    for child in ingredient_children:
+        print(child.text)
+    
+    """ ingredient_parent_node = soup_obj.find_('div', {'class' : 'tasty-recipes-ingredients-body'})
     ingredient_children= ingredient_parent_node.findChildren("li", recursive=False)
     
     for child in ingredient_children:
         parts = child.findChildren("span", recusive=False)
         for part in parts:
-            print(part.text)
+            print(part.text) """
 
 def extract_instructions(soup_obj):
     '''
     Extracts instructions from HTML
     and put it into recipe object
     '''
-    instructions_block = soup_obj.find('ol')
-    instructions_children = instructions_block.findChildren("li", recursive=False)
+    instructions_block = soup_obj.find('ol')                                        # narrows scope to instructions tree
+    instructions_children = instructions_block.findChildren("li", recursive=False)  # furthers narrows down to individual instructions
 
-    order = 0
+    order = 0           # tracks step number
 
-    for child in instructions_children:
-        summary = child.find(['strong']).text
-        description = child.find('span').text
-        
-        Instruction.Instruction(order, summary, description)
+    for child in instructions_children:             # separates each child as its own workable instance
+        summary = child.find(['strong']).text       # finds bolded instruction text
+        description = child.find('span').text       # finds instruction description
 
-        order += 1
+        Instruction.Instruction(order, summary, description)    # places variables into class
 
-        print(order)
-        print(summary)
-        print(description)
+        order += 1      # increments step number for next loop
 
-    #order = soup_obj.
-    #summary = 
-    #description =
-
-
+        print(str(order)+": " + "\033[1m" + summary + "\033[0m")
+        print(description + "\n")
 
 def main():
     # open .html file from local drive
@@ -68,9 +70,8 @@ def main():
     my_recipe = extract_header(soup_obj)
     my_recipe.print_header()
 
-    extract_instructions(soup_obj)
-
     extract_ingredients(soup_obj)
+    extract_instructions(soup_obj)
     '''
     # print elements of interest
     print(name)

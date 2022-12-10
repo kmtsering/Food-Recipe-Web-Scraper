@@ -1,5 +1,5 @@
 import Ingredient       # access ingredient class to put ingredient objects into recipe
-import Instruction
+import Instruction      # access instruction class to put directions into recipe
 class Recipe:
     '''
     Parent class for all desired data.
@@ -27,9 +27,9 @@ class Recipe:
         '''
         print(self.name)
         print(self.yields)
-        print(self.total_time)
+        print(self.total_time + "\n")
     
-    def instruction_list(self, order, summary, description):
+    def create_instruction_entry(self, order, summary, description):
         '''
         Prints out directions in step, summary, and descripton.
         '''
