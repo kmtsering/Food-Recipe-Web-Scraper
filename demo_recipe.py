@@ -1,10 +1,27 @@
 
-from bs4 import BeautifulSoup
+from urllib.request import urlopen, Request                          # library for pulling html by url
+from bs4 import BeautifulSoup                           # html parsing tool
 from Recipe import Recipe
-# from Ingredient import Ingredient                     # Current build does not use this class
 from IngredientText import IngredientText
 from Instruction import Instruction                     # syntax is file then class
 
+def url_input():
+    '''
+    Accepts user provided url
+    to create html file for
+    parsing.
+    '''
+    user_url = input("Please input recipe a link from https://www.gimmesomeoven.com: ")
+    user_url
+    print("\n")
+    # test_url = 'https://www.gimmesomeoven.com/bacon-brussels-sprouts-with-hot-honey/'
+    url_header = Request(user_url, headers={'User-Agent': 'XYZ/3.0'})   # sets headers to prevent site 403 error
+
+    url_html = urlopen(url_header, timeout=1).read()                    # retrieves link with 1 sec timeout to prevent site security blocking
+
+    return BeautifulSoup(url_html, features="html.parser")
+
+    
 def extract_header(soup_obj):
     '''
     Extracts header information from html
@@ -71,14 +88,27 @@ def extract_instructions(soup_obj):
 
 
 def main():
-    # open .html file from local drive
+    """ # open .html file from local drive
     file = open("HTML Files\Bacon Brussels Sprouts with Hot Honey - Gimme Some Oven.html", encoding='utf-8')
 
     # create BeautfiulSoup object from that file 
     # NOTE: features parameter required to get rid of library warning in output
-    soup_obj = BeautifulSoup(file, features="html.parser")
+    soup_obj = BeautifulSoup(file, features="html.parser") """
 
-    # finds elements of interest
+    # user_url = input("Please input recipe a link from https://www.gimmesomeoven.com: ")
+    # user_url
+    # # test_url = 'https://www.gimmesomeoven.com/bacon-brussels-sprouts-with-hot-honey/'
+    # url_header = Request(user_url, headers={'User-Agent': 'XYZ/3.0'})   # sets headers to prevent site 403 error
+
+    # url_html = urlopen(url_header, timeout=1).read()                    # retrieves link with 1 sec timeout to prevent site security blocking
+
+    # soup_obj = BeautifulSoup(url_html, features="html.parser")                                
+    
+    soup_obj = url_input()                  # variable will be used for all parsing functions
+    soup_obj                                # executes input prompt and returns parseable html object
+    
+    
+    # parses elements of interest
     my_recipe = extract_header(soup_obj)
     my_recipe.print_header()
 
