@@ -14,13 +14,12 @@ class Instruction:
         '''
         '''
         self.order = str(order)
-        self.summary = "\033[1m" + summary + "\033[0m"
-        self.description = description + "\n"
+        self.summary = summary
+        self.description = description
 
     def print_instruction(self):
         '''
         Show output
         '''
-        print(self.order)
-        print(self.summary)
+        print("\n" + (self.order) + ": " + "\033[1m" + self.summary + "\033[0m") # creates new line then prints order with : and bolds the summary
         print(self.description)
