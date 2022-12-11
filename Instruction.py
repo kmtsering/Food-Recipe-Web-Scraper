@@ -19,7 +19,8 @@ class Instruction:
 
     def print_instruction(self):
         '''
-        Show output
+        Show output.
+        Also for diagnostic purposes
         '''
         print("\n" + (self.order) + ": " + "\033[1m" + self.summary + "\033[0m") # creates new line then prints order with : and bolds the summary
         print(self.description)

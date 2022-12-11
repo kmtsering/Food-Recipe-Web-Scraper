@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 from Recipe import Recipe
 from Ingredient import Ingredient
+from IngredientText import IngredientText
 from Instruction import Instruction                     # syntax is file then class
 
 def extract_header(soup_obj):
@@ -13,8 +14,10 @@ def extract_header(soup_obj):
     name = soup_obj.body.find('h2', attrs={'class' : 'tasty-recipes-title'}).text
     yields = soup_obj.body.find('span', attrs={'class' : 'tasty-recipes-yield'}).text
     total_duration = soup_obj.body.find('span', attrs={'class' : 'tasty-recipes-total-time'}).text
-    
-    return Recipe(name, yields, total_duration)
+
+    header_list = []                                                    # contains instances of Recipe
+    header_list.append(Recipe(name, yields, total_duration))            # adds Recipe intance to list
+    return header_list[0]                                               # returns first instance of list
 
 def extract_ingredients(soup_obj):
     '''
@@ -44,13 +47,11 @@ def extract_instructions(soup_obj):
     instructions_block = soup_obj.find('ol')                                        # narrows scope to instructions tree
     instructions_children = instructions_block.findChildren("li", recursive=False)  # furthers narrows down to individual instructions
     
-    order = 0           # tracks step number
+    order = 1           # tracks step number
 
     for child in instructions_children:             # separates each child as its own workable instance
         summary = child.find(['strong']).text       # finds bolded instruction text
         description = child.find('span').text       # finds instruction description
-
-        order += 1      # increments step number for next loop
 
         """ instruction = Instruction(order, summary, description)    # places variables into class
         instruction                                               # initializes Instruction class """
@@ -64,6 +65,10 @@ def extract_instructions(soup_obj):
         # demo to instructions print
         # print("\n" + str(order)+": " + "\033[1m" + summary + "\033[0m") 
         # print(description + "\n")
+
+        order += 1      # increments step number for next loop
+
+
 
 def main():
     # open .html file from local drive
