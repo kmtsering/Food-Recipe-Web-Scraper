@@ -1,7 +1,7 @@
 
 from bs4 import BeautifulSoup
 from Recipe import Recipe
-from Ingredient import Ingredient
+# from Ingredient import Ingredient                     # Current build does not use this class
 from IngredientText import IngredientText
 from Instruction import Instruction                     # syntax is file then class
 
@@ -19,6 +19,7 @@ def extract_header(soup_obj):
     header_list.append(Recipe(name, yields, total_duration))            # adds Recipe intance to list
     return header_list[0]                                               # returns first instance of list
 
+
 def extract_ingredients(soup_obj):
     '''
     Extracts all ingredients from HTML
@@ -28,7 +29,7 @@ def extract_ingredients(soup_obj):
     ingredient_parent_subnode = ingredient_parent_node.findChild()                                 # steps down one node from parent 
     ingredient_children= ingredient_parent_subnode.findChildren("li", recursive=False)             # scopes into each ingredient and groups them as a variable
     
-    ingredient_list = []
+    ingredient_list = []    # move outside of function to make it a global variable
 
     for child in ingredient_children:
         ingredient = IngredientText(child.text)         # initializes IngredientText with single text line of HTML text
@@ -52,7 +53,7 @@ def extract_instructions(soup_obj):
     instructions_block = soup_obj.find('ol')                                        # narrows scope to instructions tree
     instructions_children = instructions_block.findChildren("li", recursive=False)  # furthers narrows down to individual instructions
     
-    instructions_list = []            # Contains all instances of Instruction objects
+    instructions_list = []            # move outside of function to make it a global variable
 
     order = 0           # tracks step number
 

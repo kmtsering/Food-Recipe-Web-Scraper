@@ -11,6 +11,6 @@ class IngredientText:
 
     def print_ingredient_text(self):
         '''
-        Output test
+        Output for user and testing.
         '''
         print(self.text)
