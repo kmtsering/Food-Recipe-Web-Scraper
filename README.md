@@ -119,11 +119,6 @@ Note.py
 
 ## 3. Instructions for use
 
-Assume you have a user (me) who wants to download your code and try out 
-your program. Write some sample code and instructions on how to use your
- program that somebody who is almost totally unfamiliar with your 
-project would be able to follow.
-
 Please begin by loading the code onto your IDE of choice.
 
 To utilize this program, please install BeautifulSoup4 through the following command. If pip installer is not availible to you, please follow pip installation instructions through this link: https://pip.pypa.io/en/stable/installation/
@@ -142,11 +137,6 @@ You will then be provided with a text output of the complete recipe along with a
 Enjoy!
 
 ## 4. Sugested future directions
-
-Say that someone sees your project and decides that it's very cool and 
-they want to develop it further. What would you suggest that they work 
-on next? Suggest at least 2 features that you would suggest future 
-programmers develop. 
 
 Users can sometimes input a problematic URL outside of the inent of this program. The url_input() can be made more robust by accounting for these error cases.
 
