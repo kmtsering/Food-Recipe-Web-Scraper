@@ -51,15 +51,7 @@ def extract_ingredients(soup_obj):
         ingredient = IngredientText(child.text)         # initializes IngredientText with single text line of HTML text
         ingredient_list.append(ingredient)              # adds this instance of IngredientText to list
         ingredient.print_ingredient_text()              # calls IngredientText print method
-    
-    # following docstring contains incomplete version of high granularity parser
-    """ ingredient_parent_node = soup_obj.find_('div', {'class' : 'tasty-recipes-ingredients-body'})
-    ingredient_children= ingredient_parent_node.findChildren("li", recursive=False)
-    
-    for child in ingredient_children:
-        parts = child.findChildren("span", recusive=False)
-        for part in parts:
-            print(part.text) """
+
 
 def extract_instructions(soup_obj):
     '''
@@ -104,44 +96,21 @@ def extract_notes(soup_obj):
 
 
 def main():
-    """ # open .html file from local drive
-    file = open("HTML Files\Bacon Brussels Sprouts with Hot Honey - Gimme Some Oven.html", encoding='utf-8')
-
-    # create BeautfiulSoup object from that file 
-    # NOTE: features parameter required to get rid of library warning in output
-    soup_obj = BeautifulSoup(file, features="html.parser") """
-
-    # user_url = input("Please input recipe a link from https://www.gimmesomeoven.com: ")
-    # user_url
-    # # test_url = 'https://www.gimmesomeoven.com/bacon-brussels-sprouts-with-hot-honey/'
-    # url_header = Request(user_url, headers={'User-Agent': 'XYZ/3.0'})   # sets headers to prevent site 403 error
-
-    # url_html = urlopen(url_header, timeout=1).read()                    # retrieves link with 1 sec timeout to prevent site security blocking
-
-    # soup_obj = BeautifulSoup(url_html, features="html.parser")                                
-    
+    '''
+    Executes all functions relevant to program
+    '''
     soup_obj = url_input()                  # variable will be used for all parsing functions
     soup_obj                                # executes input prompt and returns parseable html object
     
     
     # parses elements of interest
     my_recipe = extract_header(soup_obj)
-    my_recipe.print_header()
+    my_recipe.print_header()                # prints out header
 
     extract_ingredients(soup_obj)
     
     extract_instructions(soup_obj)
     
     extract_notes(soup_obj)
-    
-    '''
-    # print elements of interest
-    print(name)
-    print("Total time: ",total_duration)
-    print(yields)
-    '''
-    # create Recipe object with elements of itnerest
-    #rec = Recipe.Recipe()
 
-    #rec.print_header()
 main()
