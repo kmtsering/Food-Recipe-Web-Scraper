@@ -1,9 +1,9 @@
-
-from urllib.request import urlopen, Request                          # library for pulling html by url
+from urllib.request import urlopen, Request             # library for pulling html by url
 from bs4 import BeautifulSoup                           # html parsing tool
 from Recipe import Recipe
 from IngredientText import IngredientText
 from Instruction import Instruction                     # syntax is file then class
+from Note import Note
 
 def url_input():
     '''
@@ -14,7 +14,6 @@ def url_input():
     user_url = input("Please input recipe a link from https://www.gimmesomeoven.com: ")
     user_url
     print("\n")
-    # test_url = 'https://www.gimmesomeoven.com/bacon-brussels-sprouts-with-hot-honey/'
     url_header = Request(user_url, headers={'User-Agent': 'XYZ/3.0'})   # sets headers to prevent site 403 error
 
     url_html = urlopen(url_header, timeout=1).read()                    # retrieves link with 1 sec timeout to prevent site security blocking
@@ -84,7 +83,24 @@ def extract_instructions(soup_obj):
         instructions_list.append(instruction)                     # adds Instruction instance to list
         instruction.print_instruction()                           # uses Instruction method to print
 
-    instructions_list[0].print_instruction() # this is to test if the list storing works
+
+def extract_notes(soup_obj):
+    '''
+    Parses notes for ingredient if any are provided.
+    '''
+    notes_block = soup_obj.find('div', {'class' : 'tasty-recipes-notes-body'}) # finds any existing notes as a larger body
+
+    if notes_block==None:           # checks to see if notes for recipe exists
+        return None                 # prevents error by halting further parse requests
+    else:
+        notes_children = notes_block.findChildren("p", recursive=False)     # steps 1 increment in tree
+
+        notes_list = []             # set outside function to make global variable
+        for child in notes_children:
+            note = Note(child.text) # single text line for a note being fed into class
+            notes_list.append(note) # adds to list an object
+            note.print_note()       # calls Note print method
+
 
 
 def main():
@@ -116,6 +132,7 @@ def main():
     
     extract_instructions(soup_obj)
     
+    extract_notes(soup_obj)
     
     '''
     # print elements of interest
