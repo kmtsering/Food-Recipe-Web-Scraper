@@ -20,7 +20,7 @@ def url_input():
 
     return BeautifulSoup(url_html, features="html.parser")
 
-    
+header_list = []       # stores instances of Recipe 
 def extract_header(soup_obj):
     '''
     Extracts header information from html
@@ -31,10 +31,12 @@ def extract_header(soup_obj):
     yields = soup_obj.body.find('span', attrs={'class' : 'tasty-recipes-yield'}).text
     total_duration = soup_obj.body.find('span', attrs={'class' : 'tasty-recipes-total-time'}).text
 
-    header_list = []                                                    # contains instances of Recipe
+
     header_list.append(Recipe(name, yields, total_duration))            # adds Recipe intance to list
     return header_list[0]                                               # returns first instance of list
 
+
+ingredient_list = []    # stores instances of IngredientText
 
 def extract_ingredients(soup_obj):
     '''
@@ -45,13 +47,14 @@ def extract_ingredients(soup_obj):
     ingredient_parent_subnode = ingredient_parent_node.findChild()                                 # steps down one node from parent 
     ingredient_children= ingredient_parent_subnode.findChildren("li", recursive=False)             # scopes into each ingredient and groups them as a variable
     
-    ingredient_list = []    # move outside of function to make it a global variable
+
 
     for child in ingredient_children:
         ingredient = IngredientText(child.text)         # initializes IngredientText with single text line of HTML text
         ingredient_list.append(ingredient)              # adds this instance of IngredientText to list
         ingredient.print_ingredient_text()              # calls IngredientText print method
 
+instructions_list = []            # stores instances of Instruction
 
 def extract_instructions(soup_obj):
     '''
@@ -61,7 +64,7 @@ def extract_instructions(soup_obj):
     instructions_block = soup_obj.find('ol')                                        # narrows scope to instructions tree
     instructions_children = instructions_block.findChildren("li", recursive=False)  # furthers narrows down to individual instructions
     
-    instructions_list = []            # move outside of function to make it a global variable
+
 
     order = 0           # tracks step number
 
@@ -75,6 +78,7 @@ def extract_instructions(soup_obj):
         instructions_list.append(instruction)                     # adds Instruction instance to list
         instruction.print_instruction()                           # uses Instruction method to print
 
+notes_list = []             # stores instances of Note
 
 def extract_notes(soup_obj):
     '''
@@ -87,7 +91,7 @@ def extract_notes(soup_obj):
     else:
         notes_children = notes_block.findChildren("p", recursive=False)     # steps 1 increment in tree
 
-        notes_list = []             # set outside function to make global variable
+
         for child in notes_children:
             note = Note(child.text) # single text line for a note being fed into class
             notes_list.append(note) # adds to list an object
